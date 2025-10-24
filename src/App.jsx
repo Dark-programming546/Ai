@@ -1,16 +1,21 @@
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
+import About from "./pages/About";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <>
       <Navbar />
-      <main className="flex-grow">
-        <Dashboard />
+      <main className="p-4">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
       </main>
-      <Footer />
-    </div>
+    </>
   );
 }
 

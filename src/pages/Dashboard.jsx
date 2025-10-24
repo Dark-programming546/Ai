@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ContentCard from "../components/ContentCard";
 
+
 function Dashboard() {
   const [prompt, setPrompt] = useState("");
   const [contents, setContents] = useState([]);
